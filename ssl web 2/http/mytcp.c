@@ -1,6 +1,7 @@
-#include "TCP.h"
 #include <stdio.h>
 #include <errno.h>
+
+#include "mytcp.h"
 
 SockAddr_In CreateSocketAddr_IN(char *ip, unsigned short int port)
 {

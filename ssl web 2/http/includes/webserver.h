@@ -1,10 +1,10 @@
 #ifndef WEBSERVER_H
 #define WEBSERVER_H
 
-#include "TCP.h"
-#include "Http.h"
+#include "mytcp.h"
+#include "http.h"
 #include "global.h"
-#include "SSL.h"
+#include "sslsetting.h"
 
 #define ALLOW_ACCEPT 1
 #define HTTP_KIND int

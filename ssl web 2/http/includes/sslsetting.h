@@ -4,6 +4,7 @@
 #include <openssl/ssl.h>
 #include <openssl/err.h>
 #include <openssl/rand.h>
+
 #include "global.h"
 
 #define CERTF "SSL/server/server.crt"

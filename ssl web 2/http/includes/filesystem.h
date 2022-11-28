@@ -4,7 +4,7 @@
 #include "global.h"
 #include "response.h"
 #include "request.h"
-#include "TCP.h"
+#include "mytcp.h"
 
 int createfile(char *name, struct Request *req);
 

@@ -15,9 +15,9 @@
 #include <openssl/ssl.h>
 #include <openssl/err.h>
 
-#include "SSL.h"
-#include "global.h"
 #include "filesystem.h"
+#include "sslsetting.h"
+#include "global.h"
 
 #define MAX_CHUNK_SIZE 1024
 

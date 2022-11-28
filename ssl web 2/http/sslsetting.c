@@ -1,4 +1,4 @@
-#include "SSL.h"
+#include "sslsetting.h"
 
 SSL_CTX *InitSSL()
 {

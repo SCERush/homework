@@ -1,7 +1,7 @@
-#include "TCP.h"
-#include "Http.h"
+#include "mytcp.h"
+#include "http.h"
 #include "global.h"
-#include "WebServer.h"
+#include "webserver.h"
 
 #define HTTPS_PORT 22222
 #define MaxListener 10
