@@ -6,7 +6,7 @@ void OnMessage(ssl_server::SslConnection *conn, ssl_server::Buffer *buffer)
 {
     std::string str = buffer->ReadAll();
     fprintf(stdout, "Received %lu bytes: \n%s\n", str.size(), str.c_str());
-    // conn->Send("Reply: " + str);
+
     conn->Send(
         "HTTP/1.1 200 OK\r\nContent-Type: text/plain\r\nContent-Length: "
         "26\r\n\r\nHello this is SslTcpServer");
