@@ -13,4 +13,4 @@ WebServer: common.o main.o https.o
 	rm -r *.o
 
 clean:	
-	rm *.o WebServer
+	rm -r WebServer
