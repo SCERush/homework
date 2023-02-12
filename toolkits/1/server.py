@@ -460,5 +460,5 @@ if __name__ == "__main__":
     ip = '192.168.43.132'
     port = 12345
     contrl_server = LFTPserver(
-        server_type='control', host=ip, port=port, bufferSize=2048)
+        server_type='control', host=ip, port=port, bufferSize=16*1024)
     contrl_server.start()

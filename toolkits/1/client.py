@@ -536,5 +536,5 @@ if __name__ == '__main__':
     ip = '192.168.43.132'
     port = 12345
     filename = 'output.bin'
-    client = LFTPClient(ip, port, 1024)
+    client = LFTPClient(ip, port, 16*1024)
     client.start("DOWNLOAD", filename)

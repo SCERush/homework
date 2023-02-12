@@ -11,7 +11,7 @@ server_ssh = ''
 client_scp = '' 
 server_scp = ''
 tb = pt.PrettyTable()
-tb.field_names = ["测试文件大小(G)", "耗时(s)", "server端文件md5", "client端文件md5", "md5检测"]
+tb.field_names = ["大小(G)", "耗时(s)", "md5检测"]
 
 def ssh_connect(host_ip, user_name, password):
     '''
@@ -80,6 +80,7 @@ def one_test(client_filepath, server_filepath, server_ip, server_port, generate_
     
     # 计算传输时间
     time_spent = end - start
+    time_spent = round(time_spent, 2)
 
     # 如果client连接server失败，则报错退出
     if client_exec_result[1] != b'':
@@ -96,7 +97,7 @@ def one_test(client_filepath, server_filepath, server_ip, server_port, generate_
     file_md5_on_server = exec_command(server_ssh, "md5sum ~/output.bin")[0].split()[0]
 
     # 利用prettytable记录结果
-    tb.add_row([str(size), str(time_spent), file_md5_on_server, file_md5_on_client, file_md5_on_server == file_md5_on_client])
+    tb.add_row([str(size), str(time_spent), file_md5_on_server == file_md5_on_client])
     print(tb)
     f = open("./result.txt", 'w')
     f.write(str(tb))
